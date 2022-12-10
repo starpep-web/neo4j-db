@@ -29,3 +29,19 @@ docker run -it --rm -p 7474:7474 -p 7687:7687 --env=NEO4J_AUTH=none peptides/db
 ## Development Files
 
 You can use the `build.sh` and `test.sh` to quickly build and test the image locally.
+
+## Notes
+
+Currently, the image is pre-built with the database content. It is also set as **Read Only**.
+
+You can change this by editing the `neo4j.conf` file and replace the line:
+
+```text
+dbms.read_only=true
+```
+
+to:
+
+```text
+dbms.read_only=false
+```
