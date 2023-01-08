@@ -7,9 +7,9 @@ RUN unzip starPep.db.zip
 
 FROM neo4j:3.5
 
-RUN apt-get update && apt-get install -y lsof
+RUN apt-get update && apt-get install -y net-tools
 
 COPY --from=build --chown=neo4j:neo4j /tmp/starPep.db /data/databases/graph.db
 COPY neo4j.conf /var/lib/neo4j/conf/neo4j.conf
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD "lsof -i:7687 | grep LISTEN || exit 1"
+HEALTHCHECK --interval=15s --timeout=5s --start-period=5s --retries=3 CMD netstat -na | grep 7687.*LISTEN || exit 1
