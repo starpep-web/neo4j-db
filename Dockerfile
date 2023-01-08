@@ -11,5 +11,7 @@ COPY --from=build /tmp/starPep.db /data/databases/graph.db
 
 COPY neo4j.conf /var/lib/neo4j/conf/neo4j.conf
 
+EXPOSE 7687
+
 ENTRYPOINT ["tini", "-g", "--", "/startup/docker-entrypoint.sh"]
 CMD ["neo4j"]
