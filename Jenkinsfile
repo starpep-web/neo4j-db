@@ -29,7 +29,7 @@ pipeline {
         echo 'Building docker image...'
 
         script {
-          image = docker.build(DOCKER_IMAGE, "--no-cache")
+          image = docker.build(DOCKER_IMAGE, "--no-cache .")
         }
       }
     }
