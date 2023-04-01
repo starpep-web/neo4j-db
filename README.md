@@ -33,7 +33,7 @@ docker run -it --rm -p 7474:7474 -p 7687:7687 --env=NEO4J_AUTH=none code.moonsta
 To build this image, run the following command from the folder of this repository.
 
 ```text
-docker build -t test/neo4j-db .
+docker build --no-cache -t test/neo4j-db .
 ```
 
 > TODO: Replace `test/neo4j-db` with the name of the image to use.
@@ -77,7 +77,7 @@ You now have a new `starPep.db.zip` file with the updated database, which should
 You can then rebuild the image:
 
 ```text
-docker build -t test/neo4j-db .
+docker build --no-cache -t test/neo4j-db .
 ```
 
 And use it as normal.
