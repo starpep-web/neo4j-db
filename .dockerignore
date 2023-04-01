@@ -1,1 +1,8 @@
-*.sh
+# Ignore everything by default
+*
+
+# Allow the public project files.
+!Dockerfile
+!neo4j.conf
+!README.md
+!starPep.db.zip
