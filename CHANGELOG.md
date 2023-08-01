@@ -2,12 +2,14 @@
 
 All notable changes to this project will be documented in this file.
  
-## [Unreleased] - 2023-07-31
- 
-Unreleased changes for this project.
+## [2] - 2023-08-01
+  
+Use image: `code.moonstar-x.dev/webpep/neo4j-db:2`
  
 ### Added
- 
+
+- Added `Hemopi_R_GAAC` data as `HemolyticPotential` node.
+
 ### Changed
  
 ### Fixed
