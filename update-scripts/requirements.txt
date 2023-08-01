@@ -1,7 +1,9 @@
 certifi==2023.7.22
+et-xmlfile==1.1.0
 interchange==2021.0.4
 monotonic==1.6
 numpy==1.24.4
+openpyxl==3.1.2
 packaging==23.1
 pandas==2.0.3
 pansi==2020.7.3
@@ -12,3 +14,4 @@ pytz==2023.3
 six==1.16.0
 tzdata==2023.3
 urllib3==2.0.4
+xlrd==2.0.1
