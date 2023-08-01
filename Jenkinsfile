@@ -32,7 +32,7 @@ pipeline {
         }
       }
     }
-    
+
     stage('Build Docker Image') {
       when {
         allOf {
@@ -68,8 +68,11 @@ pipeline {
         echo 'Deploying docker image to registry...'
 
         script {
+          def version = readFile(file: 'VERSION').trim()
+
           docker.withRegistry(DOCKER_REGISTRY, 'gitea_packages_account') {
             image.push('latest')
+            image.push(version)
           }
         }
       }
