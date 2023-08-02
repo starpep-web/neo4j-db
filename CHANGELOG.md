@@ -8,7 +8,7 @@ Use image: `code.moonstar-x.dev/webpep/neo4j-db:2`
  
 ### Added
 
-- Added `Hemopi_R_GAAC` data as `HemolyticPotential` node.
+- Added `Hemopi_R_GAAC` data as `Attributes` node.
 
 ### Changed
  

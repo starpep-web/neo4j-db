@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 
 
-_RELATIONSHIP_NAME = 'hemolytic_attributed_by'
-_NODE_LABEL = 'HemolyticPotential'
+_RELATIONSHIP_NAME = 'characterized_by'
+_NODE_LABEL = 'Attributes'
 
 
 CREATE_QUERY = f'MATCH (n:Peptide) WHERE ID(n) = $id CREATE (n)-[:{_RELATIONSHIP_NAME}]->(:{_NODE_LABEL} $props)'
