@@ -32,8 +32,16 @@ docker run -it --rm -p 7474:7474 -p 7687:7687 --env=NEO4J_AUTH=none code.moonsta
 
 To build this image, run the following command from the folder of this repository.
 
+For the `linux/amd64` image:
+
 ```text
-docker build --no-cache -t test/neo4j-db .
+docker build --no-cache -t test/neo4j-db -f amd64.Dockerfile .
+```
+
+For the `linux/arm64` image:
+
+```text
+docker build --no-cache -t test/neo4j-db -f arm64.Dockerfile .
 ```
 
 > TODO: Replace `test/neo4j-db` with the name of the image to use.
