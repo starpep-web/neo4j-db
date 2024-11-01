@@ -58,13 +58,13 @@ jobs:
         id: docker_build_arm64
         uses: docker/build-push-action@v6
         env:
-          GHCR_IMAGE: ghcr.io/${{ inputs.ghcr_image_name }}-arm
+          GHCR_IMAGE: ghcr.io/${{ inputs.ghcr_image_name }}
         with:
           context: .
           file: arm64.Dockerfile
           push: true
           tags: |
-            ${{ env.GHCR_IMAGE }}:${{ inputs.image_tag }}
+            ${{ env.GHCR_IMAGE }}:${{ inputs.image_tag }}-arm
           no-cache: true
           platforms: linux/arm64/v8
 
